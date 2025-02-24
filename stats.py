@@ -23,9 +23,17 @@ def char_counter(string):
     return chars
 
 # function that sorts the char dictionary from greatest to least count (TO DO)
-def sorter(dic):
-    count = float("-inf")
-    for count in dic:
+def sorter(dict):
+    # turn the dictionary into a list of dictionaries
+    list = []
+    for char, count in dict.items():
+        list.append({char: count})
 
+    # sort the list of dictionaries by their values
+    list.sort(reverse=True, key=sorter_helper)
 
-    return sorted
+    return list
+
+# gets the value from the key even though we don't know what the key will be at the time
+def sorter_helper(dict):
+    return list(dict.values())[0]
