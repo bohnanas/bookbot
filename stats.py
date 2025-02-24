@@ -22,3 +22,10 @@ def char_counter(string):
 
     return chars
 
+# function that sorts the char dictionary from greatest to least count (TO DO)
+def sorter(dic):
+    count = float("-inf")
+    for count in dic:
+
+
+    return sorted
